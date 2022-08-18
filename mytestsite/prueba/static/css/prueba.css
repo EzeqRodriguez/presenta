@@ -1,0 +1,99 @@
+.formulario {
+  width: 52%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #0b4146;
+  color: white;
+}
+
+.titulo {
+  font-family: Arial;
+  font-size: 20px;
+  color: white;
+}
+
+.logo {
+  height: 100px;
+}
+
+.barra {
+  width: 100%;
+  height: 30px;
+}
+
+.enviar {
+  text-decoration: none;
+}
+
+.enviar:hover {
+  color: #4fbd4b;
+}
+
+.princ {
+  margin: 50px;
+  width: 50%;
+}
+
+.princ:hover {
+  text-shadow: 1px 1px 1px #1f747d;
+  cursor: pointer;
+}
+
+.comp {
+  background-color: #0b4146;
+  margin: 50px;
+  margin-left: 13%;
+  padding: 50px;
+  width: 75%;
+  border-radius: 10px;
+}
+
+.comp_cuen {
+  background-color: #0b4147;
+  margin: 50px;
+  margin-left: 13%;
+  padding: 50px;
+  padding-bottom: 100px;
+  width: 75%;
+  border-radius: 10px;
+}
+
+.tarj {
+  margin-left: 45%;
+}
+
+.tar {
+  color: white;
+}
+
+.sig {
+  color: black;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: black;
+}
+
+.ultimo {
+  padding-left: 50%;
+}
+
+.pres {
+  width: 50%;
+  margin-left: 300px;
+}
+
+.ayuda {
+  color: white;
+  background-color: #0b4147;
+  width: 25%;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 10px;
+}
+
+.deb-cred {
+  text-decoration: none;
+}
+/*# sourceMappingURL=prueba.css.map */
