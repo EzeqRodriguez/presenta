@@ -7,7 +7,10 @@
 
 {% block nav %}
 <li class="nav-item">
-  <a class="nav-link" href="clientes">Cuenta</a>
+  <a class="nav-link active" aria-current="page" href="principal">Inicio</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="cuentas">Cuenta</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="tarjetas">Tarjetas</a>
@@ -19,7 +22,8 @@
 
 {% block content %}
 
-<p>CLIENTES</p>
+<p>CUENTA</p>
+<p> Balance: </p>
 
 <img class="pres" src="{% static 'imagenes/construccion.jpg' %}">
 

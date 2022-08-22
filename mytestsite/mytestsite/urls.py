@@ -31,7 +31,7 @@ urlpatterns = [
 #  path('', views.home, name="home"),
     path('admin/', admin.site.urls),
     path('principal', bienvenida, name='principal'),
-    path('clientes',  clientes),
+    path('cuentas',  clientes, name='cuentas'),
     path('iniciar',  login1, name='iniciar' ),
     path('prestamos', prestamos,  name='prestamos'),
     path('cerrar', cerrar,  name='cerrar'),
