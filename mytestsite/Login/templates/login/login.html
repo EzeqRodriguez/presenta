@@ -1,13 +1,38 @@
 {% extends "prueba/index.html" %}
 
+{% load static %}
 
 {% block title %}  login  {% endblock %}
 
 
+{% block nav %}
+
+{% endblock %}
 
 {% block content %}
 
-<div class="wrapper">
+<form method="post" action="">
+
+  {% csrf_token %}
+
+  {% if messages %}
+  
+  {% for mensaje in messages %}
+  {{mensaje}}
+  {% endfor %}
+
+  {% endif %}
+
+  {{form}}
+
+
+
+  <button type ="submit">Iniciar sesion</button>
+  <p>  <a href='registro'>  No tienes cuenta? Registrate aqui </a> </p>
+</form>
+
+
+{% comment %} <div class="wrapper">
     <form class="form-signin">       
       <h2 class="form-signin-heading">Iniciar sesion</h2>
       <input type="text" class="form-control" name="username" placeholder="DNI" required="" autofocus="" />
@@ -16,8 +41,8 @@
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Recordarme
       </label>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>   
-      <p>  <a href='registro'>  No tienes cuenta, Registrate aqui </a> </p>
+      <p>  <a href='registro'>  No tienes cuenta? Registrate aqui </a> </p>
     </form>
-</div>
+</div> {% endcomment %}
 
 {% endblock %}

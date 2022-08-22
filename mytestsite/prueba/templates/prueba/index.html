@@ -29,6 +29,23 @@
 
         <img class="logo" src="{% static 'imagenes/itbanksinfondo.png' %}">
         <img class="barra" src="{% static 'imagenes/multicolor.png' %}">
+        
+        <div style=" text-align: right; margin-right: 200px"> 
+        
+        {% if user.is_authenticated %}
+
+        Hola {{ user.username }} <a href="cerrar">Cerrar sesion</a>
+
+        {% else %}
+
+        
+
+        {% endif %}
+        
+        </div>
+        
+
+
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
@@ -37,27 +54,25 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-                  </li>
+                  
                   
                   <li class="nav-item">
-                    <a class="nav-link" href="login">Iniciar sesion</a>
+                    <a class="nav-link" href="iniciar">Iniciar sesion</a>
                   </li>
-                  
+                  {% block nav %}
                   <li class="nav-item">
-                    <a class="nav-link" href="clientes">Clientes</a>
+                    <a class="nav-link active" aria-current="page" href="principal">Inicio</a>
                   </li>
-                  {% comment %} <li class="nav-item">
-                    <a class="nav-link" href="cuentas">Cuentas</a>
-                  </li> {% endcomment %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="clientes">Cuenta</a>
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="tarjetas">Tarjetas</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="prestamos">Prestamos</a>
-                  </li>
-                  
+                  </li> 
+                  {% endblock %}
                   
                       </li>
                 </ul>

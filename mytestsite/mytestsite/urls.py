@@ -22,7 +22,7 @@ from prueba.views import bienvenida
 
 from Clientes.views import clientes
 
-from Login.views import login, registro
+from Login.views import login1, registro, cerrar
 from Prestamos.views import prestamos
 from Tarjetas.views import tarjetas
 
@@ -30,12 +30,13 @@ from Tarjetas.views import tarjetas
 urlpatterns = [
 #  path('', views.home, name="home"),
     path('admin/', admin.site.urls),
-    path('', bienvenida),
+    path('principal', bienvenida, name='principal'),
     path('clientes',  clientes),
-    path('login',  login),
-    path('prestamos',  prestamos),
+    path('iniciar',  login1, name='iniciar' ),
+    path('prestamos', prestamos,  name='prestamos'),
+    path('cerrar', cerrar,  name='cerrar'),
     path('tarjetas',  tarjetas),
-    path('registro',  registro),
+    path('registro',  registro.as_view(), name="registrarse"),
 
 ]
 
