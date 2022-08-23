@@ -1,9 +1,8 @@
-
 {% extends "prueba/index.html" %}
 
 {% load static %}
 
-{% block title %}  clientes  {% endblock %}
+{% block title %} cuentas {% endblock %}
 
 {% block nav %}
 <li class="nav-item">
@@ -16,15 +15,56 @@
   <a class="nav-link" href="tarjetas">Tarjetas</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="prestamos">Prestamos</a>
-</li> 
+  <a class="nav-link" href="presta">Prestamos</a>
+</li>
 {% endblock %}
 
 {% block content %}
 
-<p>CUENTA</p>
-<p> Balance: </p>
+<body>
+  <table>
+    <thead>
+        <tr>
+
+          <th style="color:black">n</th>
+          <th style="color:black">NOMBRE</th>
+          <th style="color:black">APELLIDO</th>
+
+        </tr>
+
+
+    </thead>
+    <tbody>
+
+  {% for c in clientes %}
+    <tr>
+      <td style="color:black"> {{c.customer_id}} </td>
+      <td style="color:black"> {{c.customer_name}}  </td>
+      <td style="color:black"> {{c.customer_surname}}  </td>
+    
+
+    </tr>
+    
+  {% endfor %}
+  
+  
+
+    </tbody>
+
+
+  </table>
+
+
+</body>
+
+
+
+
+
+
+{% comment %} <p>CUENTA</p>
+<p> Balance: </p> {% endcomment %}
 
 <img class="pres" src="{% static 'imagenes/construccion.jpg' %}">
 
-{% endblock %} 
+{% endblock %}

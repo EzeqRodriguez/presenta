@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-# from django.contrib import admin
-# from django.urls import path
+
 
 from prueba.views import bienvenida
 
@@ -33,10 +32,11 @@ urlpatterns = [
     path('principal', bienvenida, name='principal'),
     path('cuentas',  clientes, name='cuentas'),
     path('iniciar',  login1, name='iniciar' ),
-    path('prestamos', prestamos,  name='prestamos'),
+    path('presta', prestamos,  name='presta'),
     path('cerrar', cerrar,  name='cerrar'),
     path('tarjetas',  tarjetas),
     path('registro',  registro.as_view(), name="registrarse"),
 
 ]
+
 

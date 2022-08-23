@@ -53,3 +53,6 @@ def login1(request):
 def cerrar(request):
     logout(request)
     return redirect('iniciar')
+
+
+
