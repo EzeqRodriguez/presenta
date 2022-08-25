@@ -11,21 +11,25 @@ def prestamos(request):
     presta=Cliente.objects.filter(customer_dni=(request.user))
     contact_form = ContactForm
     
+    
+    
+    
     if request.method == 'POST':
         formulario = contact_form(request.POST)
         if formulario.is_valid():
-            monto = formulario.cleaned_data['monto']
-            if int(monto) >= 100000:
-                return render(request, 'prestamos/prestamoR.html')
-            else:
-                # balance= Cliente.objects.all().values('balance')
-                # nuevo_balance = balance + monto
-                # # Cliente.save(nuevo_balance)
-                # Cliente.save(nuevo_balance)
             
-
-
-                return render(request, 'prestamos/prestamoA.html')
+            monto = formulario.cleaned_data['monto']
+            
+            for p in presta:
+            
+                if p.tipo == "classic" and monto >=100000:
+                    return render(request, 'prestamos/prestamoR.html')
+                elif p.tipo == "gold" and monto >=300000:
+                    return render(request, 'prestamos/prestamoR.html')
+                elif p.tipo == "black" and monto >=500000:
+                    return render(request, 'prestamos/prestamoR.html')
+                else:
+                    return render(request, 'prestamos/prestamoA.html')
     
     return render(request, 'Prestamos/prestamos.html', {"prestamos":presta, 'form':contact_form})
 
