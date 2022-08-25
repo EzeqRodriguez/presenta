@@ -21,10 +21,19 @@
 
 {% block content %}
 
-<h1 style="color:green; text-align:center"> PRESTAMO APROBADO!  </h1>
+<h1 style="color:green; text-align:center"> PRESTAMO APROBADO!!  </h1>
 
 <div class="text-center">
   <a style="float:auto" class="btn btn-outline-success" href="cuentas">Volver</a>
+
+
+{% for p in prestamos %}
+
+      <h4 style="color:black;font-family:Calibri" > su balance final es"{{p.balance}}"</h4>
+      
+      
+  {% endfor %}  
 </div>
+
 
 {% endblock %}

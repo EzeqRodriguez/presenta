@@ -29,9 +29,13 @@ def prestamos(request):
                 elif p.tipo == "black" and monto >=500000:
                     return render(request, 'prestamos/prestamoR.html')
                 else:
-                    return render(request, 'prestamos/prestamoA.html')
+                    
+                    p.balance= monto + p.balance
+                    p.save()
+                    return render(request, 'prestamos/prestamoA.html' )
     
-    return render(request, 'Prestamos/prestamos.html', {"prestamos":presta, 'form':contact_form})
+    return render(request, 'Prestamos/prestamos.html', {"prestamos":presta, 'form':contact_form,} )
+
 
 
 @login_required
