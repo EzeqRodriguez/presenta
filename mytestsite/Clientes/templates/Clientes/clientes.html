@@ -22,49 +22,28 @@
 {% block content %}
 
 <body>
-  <table>
-    <thead>
-        <tr>
 
-          <th style="color:black">n</th>
-          <th style="color:black">NOMBRE</th>
-          <th style="color:black">APELLIDO</th>
+ 
+{% for c in clientes%}
 
-        </tr>
+<div style="float:left; padding:50px;  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); width: 500px; border-radius:20px;margin-top:30px; background-color: #D9AFD9;  margin-left: 50px"> 
+  <h1  style="font-family:Calibri"> Bienvenido/a : {{c.customer_name}} {{c.customer_surname}}</h1>
+  <h2  style="font-family:Calibri"> Saldo: {{c.balance}}$  </h2>
+
+</div>
+
+{% endfor %}
 
 
-    </thead>
-    <tbody>
-
-  {% for c in clientes %}
-    <tr>
-      <td style="color:black"> {{c.customer_id}} </td>
-      <td style="color:black"> {{c.customer_name}}  </td>
-      <td style="color:black"> {{c.customer_surname}}  </td>
-    
-
-    </tr>
-    
-  {% endfor %}
+<div style=" margin: 1em; padding:1em; color:red; float:right">
   
+  <img  width="700px" height="300px" src="{% static 'imagenes/auto3.jpg' %}">
   
-
-    </tbody>
-
-
-  </table>
-
+</div> 
 
 </body>
 
 
 
-
-
-
-{% comment %} <p>CUENTA</p>
-<p> Balance: </p> {% endcomment %}
-
-<img class="pres" src="{% static 'imagenes/construccion.jpg' %}">
 
 {% endblock %}

@@ -8,9 +8,7 @@ from .models import Cliente, Cuenta
 @login_required
 def clientes(request):
     
-    clientesListados=Cliente.objects.filter(customer_name=(request.user))
+    clientesListados=Cliente.objects.filter(customer_dni=(request.user))
     
-    
-    return render(request, 'Clientes/clientes.html', {"clientes":clientesListados})
-
+    return render(request, 'Clientes/clientes.html', {"clientes":clientesListados},)
 

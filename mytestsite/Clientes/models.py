@@ -1,17 +1,17 @@
 
 from django.db import models
 
-# class Tarjeta(models.Model):
-#     customer_id = models.IntegerField(unique=True, blank=True, null=True)
-#     numero_tarjeta = models.IntegerField(blank=True, null=True)
-#     cvv = models.IntegerField(blank=True, null=True)
-#     fecha_otorgamiento = models.IntegerField(blank=True, null=True)
-#     fecha_expiracion = models.IntegerField(blank=True, null=True)
-#     tipo_tarjeta = models.IntegerField(blank=True, null=True)
+class Tarjeta(models.Model):
+    customer_id = models.IntegerField(unique=True, blank=True, null=True)
+    numero_tarjeta = models.IntegerField(blank=True, null=True)
+    cvv = models.IntegerField(blank=True, null=True)
+    fecha_otorgamiento = models.IntegerField(blank=True, null=True)
+    fecha_expiracion = models.IntegerField(blank=True, null=True)
+    tipo_tarjeta = models.IntegerField(blank=True, null=True)
 
-#     class Meta:
-#         managed = False
-#         db_table = 'TARJETA'
+    class Meta:
+        managed = False
+        db_table = 'TARJETA'
 
 
 # class AuditoriaCuenta(models.Model):
@@ -115,6 +115,8 @@ class Cliente(models.Model):
     customer_dni = models.TextField(db_column='customer_DNI', blank=True, null=True)  # Field name made lowercase.
     dob = models.TextField(blank=True, null=True)
     branch_id = models.IntegerField(blank=True, null=True)
+    balance = models.IntegerField(blank=True, null=True)
+    tipo = models.TextField()
 
     class Meta:
         managed = False
@@ -124,7 +126,7 @@ class Cliente(models.Model):
 class Cuenta(models.Model):
     account_id = models.AutoField(primary_key=True)
     customer_id = models.IntegerField()
-    balance = models.IntegerField()
+    balance = models.IntegerField(blank=True, null=True)
     iban = models.TextField()
 
     class Meta:

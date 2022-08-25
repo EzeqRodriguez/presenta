@@ -22,7 +22,7 @@ from prueba.views import bienvenida
 from Clientes.views import clientes
 
 from Login.views import login1, registro, cerrar
-from Prestamos.views import prestamos
+from Prestamos.views import prestamos, prestamoA, prestamoR
 from Tarjetas.views import tarjetas
 
 
@@ -36,7 +36,8 @@ urlpatterns = [
     path('cerrar', cerrar,  name='cerrar'),
     path('tarjetas',  tarjetas),
     path('registro',  registro.as_view(), name="registrarse"),
-
+    path('prestamoA',  prestamoA),
+    path('prestamoR',  prestamoR),
 ]
 
 

@@ -108,12 +108,14 @@ class CaracteristicasClientes(models.Model):
 
 
 class Cliente(models.Model):
-    customer_id = models.IntegerField()
+    customer_id = models.AutoField(primary_key=True)
     customer_name = models.TextField(blank=True, null=True)
     customer_surname = models.TextField(blank=True, null=True)  # This field type is a guess.
     customer_dni = models.TextField(db_column='customer_DNI', blank=True, null=True)  # Field name made lowercase.
     dob = models.TextField(blank=True, null=True)
     branch_id = models.IntegerField(blank=True, null=True)
+    balance = models.IntegerField(blank=True, null=True)
+    tipo = models.TextField()
 
     class Meta:
         managed = False
