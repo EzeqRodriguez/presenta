@@ -116,7 +116,9 @@ class Cliente(models.Model):
     branch_id = models.IntegerField(blank=True, null=True)
     balance = models.IntegerField(blank=True, null=True)
     tipo = models.TextField()
-
+    tarjeta=models.TextField()
+    vencimiento=models.TextField()
+    numero=models.TextField()
     class Meta:
         managed = False
         db_table = 'cliente'

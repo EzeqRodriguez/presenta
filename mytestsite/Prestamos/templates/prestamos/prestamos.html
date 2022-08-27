@@ -28,15 +28,19 @@
 
 {% for p in prestamos %}
 
-      <h4 style="color:black;font-family:Calibri" > Usted es un Usuario "{{p.tipo}}", su balance es"{{p.balance}}" recuerde que el limite varia para cada usuario: <br><br>Classic: 100.000$ Gold: 300.000$ Black: 500.000$ .</h4>
+      <h4 style="color:black;font-family:Calibri" > Usted es un Usuario "{{p.tipo}}"<br>Los limites de prestamo para cada usuario son: <br>Classic: 100.000$ <br>Gold: 300.000$<br> Black: 500.000$ </h4>
       
       <h1 style="text-align:center">Solicitar Prestamo</h1>
-      <br><br>
+      
   {% endfor %}  
   {% csrf_token %}
 
-
-  <form action="" method="POST"> 
+<div>
+  <form style="max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background:linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  border: 1px solid rgba(0,0,0,0.1);border-radius:20px;" action="" method="POST"> 
     
     {% csrf_token %}
     
@@ -48,5 +52,60 @@
   
   
   </form>
+</div> 
+<br>
 
 {% endblock %}
+
+{% comment %} <style>
+
+
+ 
+  
+  .wrapper {	
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: red;
+    border: 1px solid rgba(0,0,0,0.1);  
+  
+    .form-signin-heading,
+    .checkbox {
+      margin-bottom: 30px;
+    }
+  
+    .checkbox {
+      font-weight: normal;
+    }
+  
+    .form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      @include box-sizing(border-box);
+  
+      &:focus {
+        z-index: 2;
+      }
+    }
+  
+    input[type="text"] {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  
+    input[type="password"] {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+    
+</style> {% endcomment %}

@@ -3,18 +3,19 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.views.generic import View
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+
 # Create your views here.
 
 
 class registro(View):
-
+    
     def get(self, request):
         form=UserCreationForm()
         return render(request, "Login/crearUsuario.html",{"form":form})
 
     def post(self, request):
         form=UserCreationForm(request.POST)
-
+        
         if form.is_valid():
 
             usuario=form.save()
@@ -27,7 +28,7 @@ class registro(View):
             for errores in form.error_messages:
                 messages.error(request, form.error_messages[errores])
             return render(request, "Login/crearUsuario.html",{"form":form})
-
+    
 
 def login1(request):
     if request.method=="POST":

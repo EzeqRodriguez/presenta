@@ -2,7 +2,7 @@ from django import forms
 
 
 tiposPre =(
-    ("hipotecario", "Prestamo Hipoteario"),
+    ("hipotecario", "Prestamo Hipotecario"),
     ("prendario", "Prestamo Prendario"),
     ("personal", "Prestamo Personal"),
 )

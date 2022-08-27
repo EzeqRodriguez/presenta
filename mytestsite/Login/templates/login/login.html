@@ -13,7 +13,11 @@
 
 {% block content %}
 
-<form method="post" action="">
+<form style="width:350px;
+padding: 15px 35px 45px;
+margin: 0 auto;
+background:linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+border: 1px solid rgba(0,0,0,0.1);border-radius:20px;"   method="post" action="">
 
   {% csrf_token %}
 
@@ -24,9 +28,15 @@
   {% endfor %}
 
   {% endif %}
-
-  {{form}}
-
+  <br>
+  {{form.username.label}}
+  <br>
+  {{form.username}}
+  <br>
+  {{form.password.label}}
+  <br>
+  {{form.password}}
+  <br>
 
 
   <button class="btn btn-success" type ="submit">Iniciar sesion</button>

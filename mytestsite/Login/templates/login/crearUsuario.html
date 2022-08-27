@@ -13,15 +13,32 @@
 
 {% block content %}
 
-<form method="post" action="" class="site-form">
+<form method="post" action="" style="max-width: 350px;
+padding: 15px 35px 45px;
+margin: 0 auto;
+background:linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+border: 1px solid rgba(0,0,0,0.1);border-radius:20px;" >
 
     {% csrf_token %}
-  <div style="margin:auto; width:75%">
-    {{form}}
-  
+    <br>
+    {{form.username.label}}
+    <br>
+    {{form.username}}
+    <br>
+    {{form.password1.label}}
+    <br>
+    {{form.password1}}
+    <br>
+    {{form.password2.label}}
+    <br>
+    {{form.password2}}
+    
   <br> <button class="btn btn-success" type ="submit">Registrate</button>
   
   </form>
-</div>
+
+<br>
 {% endblock %}
+
+
 

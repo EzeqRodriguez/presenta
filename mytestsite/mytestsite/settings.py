@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'Login',
     'Prestamos',
     'Tarjetas',
-
+     
 
 
 ]
@@ -144,3 +144,4 @@ MESSAGE_TAGS={
     
     
 }
+

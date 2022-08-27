@@ -32,6 +32,7 @@ urlpatterns = [
     path('principal', bienvenida, name='principal'),
     path('cuentas',  clientes, name='cuentas'),
     path('iniciar',  login1, name='iniciar' ),
+    path('',  login1, name='iniciar' ),
     path('presta', prestamos,  name='presta'),
     path('cerrar', cerrar,  name='cerrar'),
     path('tarjetas',  tarjetas),
