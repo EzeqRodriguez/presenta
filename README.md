@@ -1,4 +1,4 @@
-Página de banco con creación y autenticación de usuarios usando información de base de datos 
+Página de banco con creación y autenticación de usuarios usando información de base de datos.
 
 ----------------------------------------------------------------------------------------------------------------
 
