@@ -1,5 +1,8 @@
 Página de banco con creación y autenticación de usuarios usando información de base de datos 
 
+----------------------------------------------------------------------------------------------------------------
+
+
 ![regis](https://user-images.githubusercontent.com/105322427/211692137-7601bd69-b646-4a9d-b37e-da337bcec50d.png)
 
 
